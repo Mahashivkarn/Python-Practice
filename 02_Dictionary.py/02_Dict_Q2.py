@@ -1,0 +1,11 @@
+s=set()
+s.add(int(input("Enter a Number1:")))
+s.add(int(input("Enter a Number2:")))
+s.add(int(input("Enter a Number3:")))
+s.add(int(input("Enter a Number4:")))
+s.add(int(input("Enter a Number5:")))
+s.add(int(input("Enter a Number6:")))
+s.add(int(input("Enter a Number7:")))
+s.add(int(input("Enter a Number8:")))
+
+print(s)

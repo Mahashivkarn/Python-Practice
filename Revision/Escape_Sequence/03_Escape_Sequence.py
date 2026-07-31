@@ -1,0 +1,7 @@
+# print("Hello" , 'World'  ,'''Hii''',sep=",")
+print("Yo",end="!")
+print("")
+print("Yo",end="!")
+print("")
+print("Honey Singh",end =".")
+print("")

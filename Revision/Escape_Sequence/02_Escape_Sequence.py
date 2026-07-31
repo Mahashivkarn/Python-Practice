@@ -1,0 +1,5 @@
+print("Hello \nDhruv")
+print("Hello \\Dhruv")
+print("Hello \tDhruv")
+print("Hello \"Dhruv\"")
+print("Hello \'Dhruv\'")
