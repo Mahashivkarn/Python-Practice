@@ -1,1 +1,2 @@
-#Building my own Jarvis...
+a = 123
+print("a")
