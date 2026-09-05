@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey This is For Flashing</title>
+</head>
+<body>
+    <p>Hey There!</p>
+{% with messages=get_flashed_messages(with_categories=True)  %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <li class ="{{category}}">{{message}}</li>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+Hey you Just Logged in !
+<a href="/logout">Logout</a>
+</body>
+</html>
