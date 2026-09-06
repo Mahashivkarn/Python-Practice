@@ -1,11 +1,11 @@
 students_skills ={
-    "pyhton" : 80,
+    "python" : 80,
     "c":70,
     "c++":5,
     "HTML":50
 }
 job_requirements= {
-    "pyhton":{
+    "python":{
         "required" : 70,
         "score" : 5
     },
@@ -25,19 +25,47 @@ job_requirements= {
 def analyze_skills(students_skills,job_requirements):
     result =[]
     
+    total_contribution = 0
+    total_score = 0
+    
     for skill, requirement in job_requirements.items():
         
         current = students_skills.get(skill,0)
-        required = requirement["required"]  
+        required = requirement["required"] 
+        score = requirement["score"]
+         
         
         gap =max(required-current,0)
+        
+        skill_ratio =min(current/required,1)
+        
+        contribution =skill_ratio*score
+        
+        total_contribution += contribution
+        total_score += score
+        
+        
+        
         
         result.append({
             "skills" :skill,
             "current" : current,
             "required" : required,
-            "gap": gap
+            "gap": gap,
+            "score" : score
         })
-    return result
-analyze_skills(students_skills,job_requirements)
+        match_score = (
+            total_contribution / total_score
+        )*100
+        
+    return{
+        "match_score" :match_score,
+        "skill" : result
+    }
 
+result = analyze_skills(
+    students_skills,
+    job_requirements
+)
+
+print(result)
