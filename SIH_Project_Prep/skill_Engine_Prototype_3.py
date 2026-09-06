@@ -1,27 +1,3 @@
-students_skills ={
-    "python" : 80,
-    "c":70,
-    "c++":5,
-    "HTML":50
-}
-job_requirements= {
-    "python":{
-        "required" : 70,
-        "score" : 5
-    },
-    "c" : {
-        "required" :65,
-        "score" : 4
-    },
-    "c++" : {
-        "required" : 60,
-        "score":4
-    },
-    "HTML" : {
-        "required" : 80,
-        "score" : 3,
-    }
-}
 def analyze_skills(students_skills,job_requirements):
     result =[]
     
@@ -69,19 +45,72 @@ def analyze_skills(students_skills,job_requirements):
             key =lambda x : x["priority"],
             reverse = True
         )
-        
+        learning_path = {
+            
+            "python" : [
+                "Python Fundamentals",
+                "OOP",
+                "Advanced Python",
+                "Python Projects"
+            ],
+            "c" : [
+                "C Fundamentals",
+                "Pointers",
+                "Array",
+            ],
+            "c++" : [
+                "C++ Fundamentals",
+                "OOP",
+                "STL"
+            ],
+            "HTML" : [
+                "HTML Basics",
+                "HTML Forms",
+                "HTML Projects"
+            ]
+                
+        }
+    print("GAPS:", gaps)
+    for gap in gaps:
+                
+        skill = gap["skills"]
+
+        print("\nLearn:", skill)
+
+        for step in learning_path.get(skill,[]):
+            print(" →", step)
     return{
         "match_score" :match_score,
         "skill" : result
     }
+students_skills ={
+    "python" : 80,
+    "c":70,
+    "c++":5,
+    "HTML":50
+}
+job_requirements= {
+    "python":{
+        "required" : 70,
+        "score" : 5
+    },
+    "c" : {
+        "required" :65,
+        "score" : 4
+    },
+    "c++" : {
+        "required" : 60,
+        "score":4
+    },
+    "HTML" : {
+        "required" : 80,
+        "score" : 3,
+    }
+}
 
 result = analyze_skills(
     students_skills,
     job_requirements
-)
-result = analyze_skills(
-    students_skills,
-    job_requirements
-)
+)   
 
 print(result)
