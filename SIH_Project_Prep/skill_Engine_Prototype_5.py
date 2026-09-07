@@ -186,7 +186,7 @@ learning_paths = {
         "Flask Basics",
         "Routing",
         "REST APIs",
-        "Database Integration",
+        "Database Integ=ration",
         "Flask Project"
     ],
 
