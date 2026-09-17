@@ -9,4 +9,5 @@ data = {
 df =pd.DataFrame(data)
 print(df)
 
-df.to_excel('output1.xlsx',index = False)
+# df.to_excel('output1.xlsx',index = False)
+df.to_json('output1.json',index = False)
