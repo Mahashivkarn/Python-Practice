@@ -22,6 +22,6 @@ print(name)
 
 #Selecting Multiple Columns
 
-subset= n[["Name", "Age"]]
+subset= n[["Name"]]
 
 print(subset)
