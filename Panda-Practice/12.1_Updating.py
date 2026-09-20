@@ -13,6 +13,5 @@ print(n)
 
 #Increasing value by 5%
 
-n['Salary'] = n['Salary'] * 1.05
-
+n['Salary'] = n['Salary'] * 1.1
 print(n)
