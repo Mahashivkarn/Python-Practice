@@ -1,0 +1,6 @@
+NaN (Not a number)
+None (for object data types)
+
+innull()
+True - NaN is missing
+False - value is present
