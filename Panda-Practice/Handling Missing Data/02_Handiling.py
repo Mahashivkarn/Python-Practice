@@ -1,3 +1,5 @@
+#dropna()
+
 import pandas as pd
 
 data = {
@@ -11,4 +13,5 @@ data = {
 n =pd.DataFrame(data)
 print(n)
 
-print(n.isnull())
+n.dropna(inplace=True)
+print(n)
