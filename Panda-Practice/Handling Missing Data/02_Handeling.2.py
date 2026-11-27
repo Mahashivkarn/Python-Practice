@@ -14,5 +14,6 @@ data = {
 n =pd.DataFrame(data)
 print(n)
 
-n.fillna("Unknown", inplace=True)
+# n.fillna({"Name": "Unknown", "Age" :0 ,"Salary" :0,"Score": 0}, inplace=True)
+n['Age'].fillna(n['Age'].mean(), inplace=True)
 print(n)
